@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+   		<title>Book List</title>
+	</head>
+	<body>
+		<h1> My Book List </h1>
+	</body>
+</html>
+
+<script>
+var myBooks = [
+	
+	{
+	title: "Catcher in the Rye",
+	author: "J.D. Salinger",
+	alreadyRead: true
+	},
+
+	{
+	title: "The Dinner",
+	author: "Herman Koch",
+	alreadyRead: true
+	},
+
+	{
+	title: "Indignation",
+	author: "Philip Roth",
+	alreadyRead: false
+	},	
+]
+
+var entry = document.createElement("P");
+var linebreak = document.createElement("BR")
+var text = ""
+for (var i = 0; i < myBooks.length; i++) {
+	var book = myBooks[i];
+	text = "Title: " + book.title + " ";
+	var t = document.createTextNode(text);
+	entry.appendChild(t);
+ }
+
+document.body.appendChild(entry)
+</script>

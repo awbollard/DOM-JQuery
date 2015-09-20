@@ -1,0 +1,36 @@
+ <!DOCTYPE html>
+ <html>
+  <head>
+   <meta charset="utf-8"/>
+   <title>About Me</title>
+   <style>
+		.listitem
+		{
+			color: red;
+		}
+	</style>
+ </head>
+ <body>
+   <h1>About Me</h1>
+
+   <ul>
+     <li>Nickname: <span id="nickname">Gick</span>
+     <li>Favorites:  <span id="favorites">Soccer, video games, and coding (obvi)</span>
+     <li>Hometown: <span id="hometown">Lebanon</span>
+    </ul>
+
+ </body>
+</html>
+
+<script>
+var pageNode = document.getElementsByTagName('body')[0];
+pageNode.style.fontFamily = "Arial,sans-serif"
+var listItems = document.getElementsByTagName('li');
+for (var i =0; i < listItems.length; i++) {
+  var listItem = listItems[i]
+  listItem.className = 'listitem'
+}
+var newImg = document.createElement('img');
+newImg.src = 'http://www.msnbc.com/sites/msnbc/files/articles/ulwab_final-2_cropped.jpg';
+pageNode.appendChild(newImg);
+</script>
